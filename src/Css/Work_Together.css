@@ -1,0 +1,151 @@
+/* Global styles */
+.contact-container {
+  background-color: #000;
+  color: white;
+  padding: 50px 20px;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: auto;
+  gap: 50px;
+}
+
+@media (min-width: 768px) {
+  .contact-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+/* Left side */
+.contact-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact-left h2 {
+  font-size: 18px;
+  color: #ccc;
+}
+
+.info-block {
+  display: flex;
+  gap: 15px;
+}
+
+.icon {
+  background-color: #1e1e1e;
+  padding: 12px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  color: white;
+  font-size: 18px;
+}
+
+.info-text .label {
+  font-size: 12px;
+  color: #aaa;
+  margin-bottom: 4px;
+}
+
+.link {
+  color: #5eaefc;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+}
+
+.social-section {
+  margin-top: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  background-color: #1e1e1e;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  transition: background 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: #333;
+}
+
+.social-icons svg {
+  color: white;
+  font-size: 16px;
+}
+
+/* Right side */
+.contact-right {
+  flex: 1;
+  background-color: #111;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.contact-heading {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #4e8bff;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  resize: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #777;
+}
+
+.contact-form button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #444;
+}

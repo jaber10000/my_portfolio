@@ -1,0 +1,176 @@
+/* ProfileCard.css */
+
+.profile-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.profile-card {
+  background: #111;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  margin-bottom: 30px;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.resume-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-name {
+  margin: 0;
+  font-size: 22px;
+}
+
+.tags {
+  margin-top: 5px;
+}
+
+.tag {
+  background: #222;
+  color: #facc15;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.toggle-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 6px 12px;
+  background: #333;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #facc15;
+  transition: 0.3s;
+}
+
+.toggle-btn:hover {
+  background: #444;
+}
+
+.contact-info {
+  margin-top: 20px;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.icon {
+  color: #facc15;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  margin-right: 15px;
+  font-size: 18px;
+  color: #aaa;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ffffff;
+}
+
+.about-section {
+  background: #111;
+  color: #eee;
+  padding: 40px;
+  border-radius: 12px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.portfolio{
+  color: #facc15;
+  
+}
+
+.tabs {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: #222;
+  cursor: pointer;
+  color: #ccc;
+  transition: 0.3s ease;
+ 
+}
+
+
+.tab:hover,
+.tab.active {
+  background-color: #333;
+  color: gold;
+  
+}
+
+.about-title {
+  font-size: 28px;
+  margin-top: 20px;
+  color: gold;
+}
+
+.about-desc {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.doing-title {
+  font-size: 22px;
+  margin-top: 30px;
+  margin-bottom: 16px;
+  color: rgb(255, 255, 255);
+}
+
+.grid-2-cols {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.grid-box {
+  background-color: #1c1c1c;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  color: #eee;
+  box-shadow: 0 0 5px #000;
+}
+
+.grid-icon {
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  flex-shrink: 0;
+}

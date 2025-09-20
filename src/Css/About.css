@@ -1,0 +1,107 @@
+body{
+  background-color: #000;
+}
+.about-page {
+  background-color: #0d0d0d;
+  color: white;
+  padding: 40px;
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-header h1 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.profile-section {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 50px;
+  flex-wrap: wrap; 
+  align-items: flex-start; 
+}
+
+.profile-image {
+  flex-shrink: 0;
+}
+
+.profile-image img {
+  width: 300px;
+  height: auto;
+  border-radius: 16px;
+}
+.profile-summary { 
+  flex: 1;
+  max-width: 800px;
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px #000;
+  color: white;
+}
+
+
+.profile-summary h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.box {
+  flex: 1;
+  min-width: 300px;
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.box h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.box ul li {
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+.bottom-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 1;
+  min-width: 200px;
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.card span {
+  color: #1DCD9F;
+  font-weight: bold;
+}
+
+.center {
+  font-size: 20px;
+}
