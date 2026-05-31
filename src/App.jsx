@@ -1,7 +1,6 @@
 
 import './App.css'
 import Message from '.'
-import Projects from './Project'
 
 function App() {
 

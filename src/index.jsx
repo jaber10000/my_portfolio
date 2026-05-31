@@ -7,12 +7,37 @@ import Work_Together from "./Work_Together.jsx";
 import Resume from "./Resume.jsx";
 
 function Message() {
-  const navigate = useNavigate(); // ✅ add this
+  const navigate = useNavigate();
 
   return (
     <div>
-      <marquee direction="right" style={{color:"white"}}
-        >This website is now under construction</marquee> 
+      {/* Animated marquee bar */}
+      <div className="marquee-bar">
+        <div className="marquee-inner">
+          {[...Array(2)].map((_, i) => (
+            <span key={i} style={{display:'contents'}}>
+              <span>Open to Work</span>
+              <span>Web Development</span>
+              <span>Machine Learning</span>
+              <span>Data Science</span>
+              <span>AI Projects</span>
+              <span>React Developer</span>
+              <span>Python</span>
+              <span>Power BI</span>
+              <span>Deep Learning</span>
+              <span>Open to Work</span>
+              <span>Web Development</span>
+              <span>Machine Learning</span>
+              <span>Data Science</span>
+              <span>AI Projects</span>
+              <span>React Developer</span>
+              <span>Python</span>
+              <span>Power BI</span>
+              <span>Deep Learning</span>
+            </span>
+          ))}
+        </div>
+      </div>
 
       <nav className="navbar">
         <div className="logo">
@@ -24,58 +49,77 @@ function Message() {
           <li><Link to="/projects">Projects</Link></li>
           <li><Link to="/contact">Contact</Link></li>
         </ul>
-        {/* My Resume Button */}
         <div className="resume-button">
           <Link to="/my_resume">
             <button>My Resume</button>
           </Link>
         </div>
       </nav>
-      
 
       <Routes>
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/Work_Together" element={<Work_Together />} />
-
-        <Route path="/contact" element={<Work_Together />}/>
-
-        <Route path="/my_resume" element={<Resume />}/>
+        <Route path="/contact" element={<Work_Together />} />
+        <Route path="/my_resume" element={<Resume />} />
         <Route
           path="/"
           element={
             <div className="home-container">
-              {/* Left Side */}
               <div className="home-text">
+                <span className="label">Portfolio — 2025</span>
                 <h1>
-                  Hi, I’m <span className="highlight">Md.Abdullah Al Jaber</span>
+                  Hi, I'm{" "}
+                  <span className="highlight">Md. Abdullah<br />Al Jaber</span>
                 </h1>
                 <h2>
-                  A Passionate{" "}
-                  <span className="highlight-alt">Web Developer & Data Scientist</span>
+                  Web Developer &amp;{" "}
+                  <span className="highlight-alt">Data Scientist</span>
                 </h2>
                 <p>
-                  I specialize in building modern, responsive websites and
-                  applications that deliver excellent user experiences.
+                  I build modern, responsive web applications and intelligent
+                  data-driven solutions — turning complex problems into elegant,
+                  user-centered experiences.
                 </p>
-                <button onClick={() => navigate("/Work_Together")}>
-                  Let's Work Together
-                </button>
+                <div className="cta-row">
+                  <button className="btn-primary" onClick={() => navigate("/Work_Together")}>
+                    Let's Work Together
+                  </button>
+                  <button className="btn-ghost" onClick={() => navigate("/projects")}>
+                    View Projects
+                  </button>
+                </div>
+                <div className="stats-row">
+                  <div className="stat-item">
+                    <div className="num">15+</div>
+                    <div className="desc">Projects</div>
+                  </div>
+                  <div className="stat-item">
+                    <div className="num">2+</div>
+                    <div className="desc">Years Exp.</div>
+                  </div>
+                  <div className="stat-item">
+                    <div className="num">5+</div>
+                    <div className="desc">Tech Stacks</div>
+                  </div>
+                </div>
               </div>
 
-              {/* Right Side */}
               <div className="home-image">
-                <img className="image_box" src={my_photo} alt="Your Profile" />
+                <img className="image_box" src={my_photo} alt="Jaber Profile" />
               </div>
             </div>
           }
         />
       </Routes>
+
       <footer>
-            <p>&copy; {new Date().getFullYear()}Jaber</p>
+        <span style={{color:'var(--muted)'}}>
+          &copy; {new Date().getFullYear()} <span>Jaber</span> — All rights reserved
+        </span>
+        <span style={{letterSpacing:'2px'}}>BD 🇧🇩</span>
       </footer>
     </div>
-    
   );
 }
 
