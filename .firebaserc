@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "jaber-portfolio"
-  }
+    "default": "jaber-portfolio",
+    "new design": "jaber-portfolio"
+  },
+  "targets": {},
+  "etags": {}
 }

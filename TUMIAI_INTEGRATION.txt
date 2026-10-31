@@ -1,0 +1,7 @@
+TumiAI has been integrated as a React component.
+Frontend: src/Chatbot.jsx + src/Css/Chatbot.css
+Mounted globally in: src/index.jsx
+Backend: backend/main.py
+Backend dependencies: backend/requirements.txt
+Prompt/context: portfolio.txt
+Setup guide: README_TumiAI.md

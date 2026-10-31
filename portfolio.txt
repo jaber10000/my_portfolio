@@ -1,0 +1,29 @@
+Md. Abdullah Al Jaber is a Computer Science Engineer, React Developer, Data Scientist and ML Engineer based in Mirpur-2, Dhaka, Bangladesh.
+
+Focus: Machine Learning & AI, Frontend Development, Data Analysis, Power BI and Excel.
+
+Experience:
+- Front End Developer, IT Company — Aug 2025 to Present.
+- Student Data Scientist, Daffodil International University — Jan 2024 to Aug 2025.
+- Dataset Contest Winner, Daffodil International University — Jan 2025 to Apr 2025.
+
+Education:
+- BSc in CSE, Daffodil International University — 2021–2025.
+- HSC, Gov't BM College, Barisal — 2018–2019.
+- SSC, Jhalakathi N S Kamil Madrasah — 2016–2017.
+
+Skills:
+React.js, HTML5, CSS3, JavaScript, Python, TensorFlow, Scikit-Learn, Deep Learning, Django, FastAPI, MySQL, Data Analysis, NLP, Power BI, Pandas, Flutter, Firebase and Dart.
+
+Projects:
+Sentiment Analysis of Movie Reviews; OCR-Based Image-to-Text Extraction; AI-Enhanced Student Learning Dashboard; Speech Emotion Recognition; Cat & Dog Image Classification; Emotion Detection using NLP; Reusable Classification Template; Student Management System; Sunrise Hotel Website; E-Commerce Shopping Mart; Flappy Bird Game; Basic Python Projects; Basic Food Delivery App.
+
+Navigation:
+Home / | About /about | Projects /projects | Contact /contact | Resume /my_resume
+
+Contact:
+Email: bs10000jaber@gmail.com
+Phone: +880 1647271765
+GitHub: https://github.com/jaber10000
+LinkedIn: https://www.linkedin.com/in/md-abdullah-al-jaber-699a1a266/
+Location: Mirpur-2, Dhaka, Bangladesh

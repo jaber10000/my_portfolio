@@ -1,0 +1,588 @@
+{
+  "generated_at": "2026-10-31T17:32:17.388Z",
+  "profile": {
+    "name": "Md. Abdullah Al Jaber",
+    "first": "Md. Abdullah",
+    "last": "Al Jaber",
+    "title": "AI / ML Engineer",
+    "roles": [
+      "AI/ML Engineer",
+      "Computer Vision Developer",
+      "Generative AI & RAG Developer",
+      "Full-Stack Developer"
+    ],
+    "intro": "I build intelligent systems end to end — from federated-learning research and RAG assistants to full-stack products people actually use.",
+    "email": "bs10000jaber@gmail.com",
+    "emailAlt": "jaber15-4458@diu.edu.bd",
+    "phone": "+880 1647271765",
+    "location": "Mirpur-2, Dhaka, Bangladesh",
+    "github": "https://github.com/jaber10000",
+    "linkedin": "https://www.linkedin.com/in/md-abdullah-al-jaber-699a1a266/",
+    "facebook": "https://www.facebook.com/share/1Xm4Wo3FYk/"
+  },
+  "experience": [
+    {
+      "title": "Front End Developer",
+      "org": "IT Company",
+      "period": "Aug 2025 – Present",
+      "text": "Building responsive React applications and user interfaces."
+    },
+    {
+      "title": "Student Data Scientist",
+      "org": "Daffodil International University",
+      "period": "Jan 2024 – Aug 2025",
+      "text": "Research and development in ML/AI models, data preprocessing, and analysis."
+    },
+    {
+      "title": "Dataset Contest Winner",
+      "org": "Daffodil International University",
+      "period": "Jan 2025 – Apr 2025",
+      "text": "Won dataset competition for outstanding data science work.",
+      "award": true
+    }
+  ],
+  "education": [
+    {
+      "title": "BSc in CSE",
+      "org": "Daffodil International University",
+      "period": "2021 – 2025"
+    },
+    {
+      "title": "HSC",
+      "org": "Gov't BM College, Barisal",
+      "period": "2018 – 2019"
+    },
+    {
+      "title": "SSC",
+      "org": "Jhalakathi N S Kamil Madrasah",
+      "period": "2016 – 2017"
+    }
+  ],
+  "achievements": [
+    {
+      "icon": "trophy",
+      "title": "Dataset Contest Winner",
+      "meta": "Daffodil International University · 2025",
+      "text": "Won the dataset competition for outstanding data science work."
+    },
+    {
+      "icon": "flask",
+      "title": "6 Research Contributions",
+      "meta": "Federated Learning · Explainable AI · NLP",
+      "text": "Contributed to papers on privacy-preserving medical AI and Bangla fake-news detection."
+    },
+    {
+      "icon": "rocket",
+      "title": "8 Live Demos Shipped",
+      "meta": "Streamlit · Hugging Face · Vercel",
+      "text": "RAG assistants, OCR and full-stack products deployed and open for anyone to try."
+    },
+    {
+      "icon": "chart",
+      "title": "26 Projects Built",
+      "meta": "AI · Research · Web · Automation",
+      "text": "A growing body of work across machine learning, web engineering and workflow automation."
+    }
+  ],
+  "certifications": [],
+  "tech_stack": [
+    {
+      "label": "AI & Machine Learning",
+      "blurb": "Models that learn from messy data — classical ML, deep learning, NLP and privacy-preserving federated training.",
+      "tools": [
+        "Python",
+        "TensorFlow",
+        "Scikit-Learn",
+        "Pandas",
+        "NumPy",
+        "NLP",
+        "BERT",
+        "XGBoost",
+        "Federated Learning",
+        "LIME / SHAP"
+      ]
+    },
+    {
+      "label": "Computer Vision",
+      "blurb": "Teaching machines to see — OCR, image classification and medical image segmentation.",
+      "tools": [
+        "OpenCV",
+        "Tesseract OCR",
+        "U-Net",
+        "ResNet18",
+        "VGG16",
+        "CNNs",
+        "Transformer U-Net",
+        "Medical Imaging"
+      ]
+    },
+    {
+      "label": "Generative AI",
+      "blurb": "Retrieval-augmented assistants that ground LLM answers in real documents — in English and Bangla.",
+      "tools": [
+        "LangChain",
+        "RAG",
+        "FAISS",
+        "Gemini API",
+        "Sentence Transformers",
+        "LLMs",
+        "Streamlit"
+      ]
+    },
+    {
+      "label": "Workflow Automation",
+      "blurb": "Event-driven workflows that validate, route and notify — so no inquiry waits for a human.",
+      "tools": [
+        "n8n",
+        "Webhooks",
+        "Google Sheets",
+        "Gmail",
+        "Telegram",
+        "JSON",
+        "Conditional Routing"
+      ]
+    },
+    {
+      "label": "Full-Stack Development",
+      "blurb": "Polished interfaces on top of secure APIs — React front ends, FastAPI back ends, real databases.",
+      "tools": [
+        "React",
+        "TypeScript",
+        "FastAPI",
+        "Django",
+        "PostgreSQL",
+        "SQLite",
+        "MySQL",
+        "JWT",
+        "SQLAlchemy",
+        "Alembic",
+        "Flutter",
+        "Firebase",
+        "HTML / CSS / JS",
+        "PHP"
+      ]
+    }
+  ],
+  "project_categories": [
+    {
+      "title": "Machine Learning / AI",
+      "tag": "ML · AI · Deep Learning",
+      "count": 10
+    },
+    {
+      "title": "Research",
+      "tag": "Federated Learning · Explainable AI · NLP",
+      "count": 6
+    },
+    {
+      "title": "Full Stack / Web Development",
+      "tag": "React · FastAPI · Python · Database",
+      "count": 2
+    },
+    {
+      "title": "React / Frontend",
+      "tag": "React · HTML · CSS · JS",
+      "count": 4
+    },
+    {
+      "title": "Other Projects",
+      "tag": "Python · Flutter · Mobile",
+      "count": 4
+    }
+  ],
+  "projects": [
+    {
+      "category": "Machine Learning / AI",
+      "category_id": "ml",
+      "title": "University PDF Assistant",
+      "description": "AI-powered PDF assistant for document understanding and intelligent question answering.",
+      "details": "Developed an AI-powered PDF Assistant that enables users to upload academic and university documents and receive context-aware answers. Implemented Retrieval-Augmented Generation (RAG) using LangChain and FAISS for semantic document retrieval, while leveraging the Gemini API to generate accurate responses through an interactive Streamlit interface.",
+      "techs": [
+        "Python",
+        "Streamlit",
+        "LangChain",
+        "FAISS",
+        "Gemini API",
+        "RAG"
+      ],
+      "github": "https://github.com/jaber10000/UniversityPDFAssistant",
+      "live": "https://universitypdfassistant-3c3txq6z4cdmpxl3uzuws8.streamlit.app/"
+    },
+    {
+      "category": "Machine Learning / AI",
+      "category_id": "ml",
+      "title": "Bangla News Q&A Bot (RAG)",
+      "description": "Retrieval-Augmented Generation system for answering questions from Bangla news articles.",
+      "details": "Built a Retrieval-Augmented Generation (RAG) system that retrieves relevant context from Bangla news articles and generates accurate answers to user queries. Implemented document chunking, vector embeddings, semantic search with FAISS, and LangChain-based retrieval pipelines to improve response quality and relevance.",
+      "techs": [
+        "Python",
+        "LangChain",
+        "FAISS",
+        "RAG",
+        "LLM",
+        "NLP"
+      ],
+      "github": "https://github.com/jaber10000/BanglaNewsQABot",
+      "live": "https://banglanewsappbot-9om7r2ssgatdpacunkenyz.streamlit.app/"
+    },
+    {
+      "category": "Machine Learning / AI",
+      "category_id": "ml",
+      "title": "AI Resume Matcher",
+      "description": "AI-powered ATS resume analyzer with job matching and career recommendations.",
+      "details": "Built an AI-powered ATS Resume Analyzer that compares resumes with job descriptions, calculates matching scores, identifies skill gaps, and generates AI-driven career recommendations. Implemented semantic similarity analysis using Sentence Transformers and developed an interactive dashboard with Streamlit.",
+      "techs": [
+        "Python",
+        "Streamlit",
+        "LangChain",
+        "Sentence Transformers",
+        "NLP",
+        "AI"
+      ],
+      "github": "https://github.com/jaber10000/ai_resume_matcher",
+      "live": "https://airesumematcher-rh3snztvwwsu33acjqdnwe.streamlit.app/"
+    },
+    {
+      "category": "Machine Learning / AI",
+      "category_id": "ml",
+      "title": "Sentiment Analysis of Movie Reviews",
+      "description": "Automates IMDB review classification using ML & DL.",
+      "details": "Automatically classifies IMDB movie reviews into positive or negative categories using machine learning and deep learning techniques. Helps gain actionable insights quickly.",
+      "techs": [
+        "Python",
+        "TensorFlow",
+        "Sklearn",
+        "ML"
+      ],
+      "github": null,
+      "live": "https://huggingface.co/spaces/jaber10101/DataSynthis_ML_JobTask"
+    },
+    {
+      "category": "Machine Learning / AI",
+      "category_id": "ml",
+      "title": "OCR-Based Image-to-Text Extraction",
+      "description": "Extract text from scanned images using OCR and OpenCV.",
+      "details": "OCR system extracts text from images using Tesseract and OpenCV with preprocessing to enhance accuracy.",
+      "techs": [
+        "Python",
+        "OpenCV"
+      ],
+      "github": null,
+      "live": "https://huggingface.co/spaces/jaber10101/ocr-text-extractor"
+    },
+    {
+      "category": "Machine Learning / AI",
+      "category_id": "ml",
+      "title": "AI-Enhanced Student Learning Dashboard",
+      "description": "An AI-powered dashboard built with FastAPI that analyzes student performance data.",
+      "details": "Backend Framework: FastAPI (Python). Key Features: Automatically analyzes student scores, identifies weak areas, and suggests improvements via RESTful API.",
+      "techs": [
+        "FastAPI",
+        "Python",
+        "ML"
+      ],
+      "github": "https://github.com/jaber10000/AI-Enhanced-Student-Learning-Dashboard",
+      "live": null
+    },
+    {
+      "category": "Machine Learning / AI",
+      "category_id": "ml",
+      "title": "Speech Emotion Recognition",
+      "description": "Classify emotions in speech using MFCC & Mel Spectrogram.",
+      "details": "Trained on the TESS dataset to detect emotions from speech using deep learning.",
+      "techs": [
+        "Python",
+        "TensorFlow"
+      ],
+      "github": null,
+      "live": null
+    },
+    {
+      "category": "Machine Learning / AI",
+      "category_id": "ml",
+      "title": "Cat & Dog Image Classification",
+      "description": "Neural network to classify cat and dog images.",
+      "details": "Deep learning model classifies cat/dog images from Kaggle dataset.",
+      "techs": [
+        "Python",
+        "TensorFlow",
+        "ML"
+      ],
+      "github": null,
+      "live": null
+    },
+    {
+      "category": "Machine Learning / AI",
+      "category_id": "ml",
+      "title": "Emotion Detection using NLP",
+      "description": "Classify text emotions using multiple ML models.",
+      "details": "Built text emotion classifier using TF-IDF and Logistic Regression, Random Forest, XGBoost.",
+      "techs": [
+        "Python",
+        "NLP",
+        "Sklearn"
+      ],
+      "github": null,
+      "live": null
+    },
+    {
+      "category": "Machine Learning / AI",
+      "category_id": "ml",
+      "title": "Reusable Classification Template",
+      "description": "Flexible classification framework for any dataset.",
+      "details": "Reusable project template for experimentation and classification tasks.",
+      "techs": [
+        "Python",
+        "Sklearn",
+        "ML"
+      ],
+      "github": null,
+      "live": null
+    },
+    {
+      "category": "Research",
+      "category_id": "research",
+      "title": "Privacy-Preserving Explainable Federated Transfer Learning for Brain Tumor Segmentation",
+      "description": "Federated MRI brain tumor segmentation with CNN-based and Transformer-based U-Net.",
+      "details": "Contributed to a privacy-preserving federated learning framework for MRI-based brain tumor segmentation, working with CNN-based U-Net and Transformer-based U-Net architectures across centralized, federated, IID, and Non-IID settings. Evaluated model performance using Dice, IoU, Precision, Recall, and F1-score.",
+      "techs": [
+        "Python",
+        "Federated Learning",
+        "U-Net",
+        "Transformer"
+      ],
+      "github": null,
+      "live": null
+    },
+    {
+      "category": "Research",
+      "category_id": "research",
+      "title": "Explainable Hybrid Deep Learning Framework for Bangla Fake News Detection",
+      "description": "BERT & XLM-RoBERTa embeddings with classical ML and LIME explanations.",
+      "details": "Contributed to Bangla fake news detection using BERT and XLM-RoBERTa-based language representations combined with conventional machine learning approaches. Worked with hybrid modeling and explainability techniques, including LIME, to improve model interpretation and analysis.",
+      "techs": [
+        "Python",
+        "NLP",
+        "BERT",
+        "XLM-RoBERTa",
+        "LIME"
+      ],
+      "github": null,
+      "live": null
+    },
+    {
+      "category": "Research",
+      "category_id": "research",
+      "title": "Category-Guided Intelligence: Explainable Multi-Task Framework for Bengali Fake News Detection",
+      "description": "BanglaBERT + BiLSTM + attention with category-aware multi-task learning.",
+      "details": "Contributed to an explainable multi-task framework for Bengali fake news detection by combining BanglaBERT, BiLSTM, attention mechanisms, and category-aware learning. Worked with LIME, SHAP, and attention-based analysis to interpret model predictions and evaluate model behavior.",
+      "techs": [
+        "Python",
+        "NLP",
+        "BanglaBERT",
+        "BiLSTM",
+        "LIME",
+        "SHAP"
+      ],
+      "github": null,
+      "live": null
+    },
+    {
+      "category": "Research",
+      "category_id": "research",
+      "title": "Privacy-Preserving Federated Learning for Colorectal Cancer Detection",
+      "description": "FedAvg-based deep learning on distributed healthcare data.",
+      "details": "Developed a privacy-preserving federated learning framework for colorectal cancer detection using distributed healthcare data. Implemented deep learning-based federated training with the FedAvg algorithm and evaluated model performance under distributed learning settings.",
+      "techs": [
+        "Python",
+        "TensorFlow",
+        "Federated Learning",
+        "FedAvg"
+      ],
+      "github": null,
+      "live": null
+    },
+    {
+      "category": "Research",
+      "category_id": "research",
+      "title": "Privacy-Preserving Federated Learning for Pancreatic Malignancy Detection",
+      "description": "Federated learning framework for pancreatic cancer detection using SEER clinical data.",
+      "details": "Contributed to a federated learning framework for pancreatic cancer detection using SEER clinical data, implementing ANN-based models and FedAvg aggregation in distributed healthcare settings.",
+      "techs": [
+        "Python",
+        "Federated Learning",
+        "ANN",
+        "FedAvg"
+      ],
+      "github": null,
+      "live": null
+    },
+    {
+      "category": "Research",
+      "category_id": "research",
+      "title": "Ensemble Deep Learning for Leukemia Stage Classification",
+      "description": "Leukemia stage classification using ResNet18 and VGG16 ensemble models.",
+      "details": "Contributed to leukemia stage classification using an ensemble of ResNet18 and VGG16 models, with explainable AI techniques for model interpretation.",
+      "techs": [
+        "Python",
+        "Deep Learning",
+        "ResNet18",
+        "VGG16"
+      ],
+      "github": null,
+      "live": null
+    },
+    {
+      "category": "Full Stack / Web Development",
+      "category_id": "full stack",
+      "title": "Task Manager Web Application",
+      "description": "Full-stack task management platform with authentication, CRUD operations, and productivity tracking.",
+      "details": "Developed a full-stack task management application featuring JWT authentication, task CRUD operations, recurring task management, calendar view, and productivity insights. Built the frontend with React and the backend using FastAPI, with support for PostgreSQL and SQLite databases.",
+      "techs": [
+        "React",
+        "FastAPI",
+        "Python",
+        "PostgreSQL",
+        "SQLite",
+        "JWT"
+      ],
+      "github": null,
+      "live": "https://task-manager-kappa-eight-21.vercel.app/"
+    },
+    {
+      "category": "Full Stack / Web Development",
+      "category_id": "full stack",
+      "title": "ExpenseFlow – Personal Finance Management Web Application",
+      "description": "Full-stack finance management platform with expense tracking, analytics, and multi-currency support.",
+      "details": "Developed a full-stack personal finance management application featuring JWT-based authentication, income and expense tracking, transaction management, dashboard analytics, savings insights, and multi-currency support. Integrated a React frontend with a FastAPI backend and PostgreSQL database to provide secure API communication and real-time financial summaries. Deployed the frontend on Vercel and backend services on Render.",
+      "techs": [
+        "React",
+        "TypeScript",
+        "FastAPI",
+        "Python",
+        "PostgreSQL",
+        "SQLAlchemy",
+        "Alembic",
+        "JWT"
+      ],
+      "github": "https://github.com/jaber10000/Expenseflow",
+      "live": "https://expenseflow-beryl.vercel.app/"
+    },
+    {
+      "category": "React / Frontend",
+      "category_id": "react",
+      "title": "Student Management System",
+      "description": "React-based system with dashboards for admin, teacher, and student roles.",
+      "details": "Developed a responsive and user-friendly frontend system using React for managing student information. Includes distinct profile designs for admin, teacher, and student roles.",
+      "techs": [
+        "React",
+        "CSS",
+        "JavaScript"
+      ],
+      "github": "https://github.com/jaber10000/student-management",
+      "live": null
+    },
+    {
+      "category": "React / Frontend",
+      "category_id": "react",
+      "title": "Sunrise Hotel Website",
+      "description": "Hotel booking and information website.",
+      "details": "Built a responsive hotel website featuring booking options, room details, and clean navigation using HTML, CSS, and React.",
+      "techs": [
+        "React",
+        "HTML",
+        "CSS"
+      ],
+      "github": "https://github.com/jaber10000/jaber_sunrise_hotel",
+      "live": null
+    },
+    {
+      "category": "React / Frontend",
+      "category_id": "react",
+      "title": "E-Commerce Shopping Mart",
+      "description": "CRUD-based shopping site with cart and checkout.",
+      "details": "Dynamic shopping website using HTML, CSS, JavaScript, and PHP with CRUD functionalities.",
+      "techs": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "PHP"
+      ],
+      "github": "https://github.com/jaber10000/web_eng_project",
+      "live": null
+    },
+    {
+      "category": "React / Frontend",
+      "category_id": "react",
+      "title": "Flappy Bird Game",
+      "description": "Fun, interactive Flappy Bird-style game.",
+      "details": "Smooth game built with HTML, CSS, and JavaScript. Press spacebar to keep the bird flying and avoid obstacles.",
+      "techs": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "github": "https://github.com/jaber10000/Flappy_Bird",
+      "live": "https://jaber10000.github.io/Flappy_Bird/"
+    },
+    {
+      "category": "Other Projects",
+      "category_id": "python",
+      "title": "Basic Python Projects (4 Projects)",
+      "description": "Banking System, Quiz Game, Rock Paper Scissors, Tic-Tac-Toe.",
+      "details": "Several console-based Python applications to strengthen programming fundamentals. Includes Banking System, Quiz Game, Rock Paper Scissors, and Tic-Tac-Toe.",
+      "techs": [
+        "Python"
+      ],
+      "github": "https://github.com/jaber10000/Basic-Python-Project",
+      "live": null
+    },
+    {
+      "category": "Other Projects",
+      "category_id": "python",
+      "title": "Basic Food Delivery App (Flutter)",
+      "description": "Food delivery app with Firebase authentication.",
+      "details": "Food delivery application using Flutter (Dart) featuring Firebase Authentication for secure login. Clean and responsive UI with cart and checkout functionality.",
+      "techs": [
+        "Flutter",
+        "Dart",
+        "Firebase"
+      ],
+      "github": "https://github.com/jaber10000/Basic_food_delivery_app",
+      "live": null
+    },
+    {
+      "category": "Other Projects",
+      "category_id": "python",
+      "title": "Role-Based Contact Automation | n8n",
+      "description": "Automated contact management with category-based routing, notifications, and auto-replies.",
+      "details": "Built an automated contact management workflow using n8n. Implemented category-based routing, Telegram notifications, Google Sheets logging, and automated Gmail responses to streamline communication and inquiry handling.",
+      "techs": [
+        "n8n",
+        "Webhooks",
+        "Google Sheets",
+        "Gmail",
+        "Telegram"
+      ],
+      "github": "https://github.com/jaber10000/Role-Based-Contact-Automation",
+      "live": null
+    },
+    {
+      "category": "Other Projects",
+      "category_id": "python",
+      "title": "Enterprise Contact Automation | n8n",
+      "description": "Enterprise-grade contact automation with validation, routing, and notifications.",
+      "details": "Designed and implemented an enterprise contact automation system using n8n. Features include conditional validation, inquiry routing, automated data logging, Gmail notifications, Telegram alerts, and workflow-based communication management.",
+      "techs": [
+        "n8n",
+        "Webhooks",
+        "JSON",
+        "Google Sheets",
+        "Gmail",
+        "Telegram"
+      ],
+      "github": "https://github.com/jaber10000/Enterprise-Contact-Automation-System",
+      "live": null
+    }
+  ]
+}
