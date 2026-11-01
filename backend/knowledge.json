@@ -605,5 +605,40 @@
       "github": "https://github.com/jaber10000/Enterprise-Contact-Automation-System",
       "live": null
     }
-  ]
+  ],
+
+  "bot_profile": {
+    "name": "TumiAI",
+    "owner": "Md. Abdullah Al Jaber",
+    "role": "AI / ML Engineer"
+  },
+
+  "summary": {
+    "about": "Md. Abdullah Al Jaber is an AI/ML Engineer and Computer Science graduate from Daffodil International University.",
+    "current_job": "Inbound Officer – Customer Care at bKash Limited",
+    "total_projects": 26,
+    "total_research": 6
+  },
+
+  "quick_answers": {
+    "about": "Md. Abdullah Al Jaber is an AI/ML Engineer with expertise in AI, Machine Learning, Computer Vision, Generative AI and RAG.",
+    "experience": "Currently working as Inbound Officer – Customer Care at bKash Limited.",
+    "education": "BSc in Computer Science & Engineering from Daffodil International University (CGPA 3.30/4.00).",
+    "research": "Contributed to 6 research projects in AI, Federated Learning and NLP.",
+    "achievements": "Dataset Contest Winner and contributor to multiple AI research projects.",
+    "projects": "Built 26 projects across AI, Research, Full Stack Development and Automation.",
+    "contact": "Email: jaber15-4458@diu.edu.bd | Phone: +8801777848795"
+  },
+
+  "keywords": {
+    "about": ["jaber","abdullah","somporke"],
+    "experience": ["experience","job","work","career"],
+    "education": ["education","cgpa","ssc","hsc"],
+    "research": ["research","paper","publication"],
+    "projects": ["project","projects","portfolio"],
+    "achievements": ["achievement","award","winner"],
+    "contact": ["contact","email","phone","github","linkedin"]
+  }
 }
+
+
