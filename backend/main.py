@@ -1,25 +1,36 @@
 """
-TumiAI backend — FastAPI service for the portfolio chatbot.
+JabuAi backend — FastAPI service for the portfolio chatbot.
 
-Flow:  React (Chatbot.jsx) → POST /ask → knowledge.json (built from siteData.js +
-projectData.js) → Gemini / any OpenAI-compatible LLM → answer (+ optional page route).
+Pipeline for every POST /ask:
 
-Nothing is stored server-side: the browser sends the recent turns with every request,
-so a page reload starts a fresh conversation.
+    1. intents          phrase-level intent match            (Bangla / English / Banglish)
+    2. keywords         typo-tolerant keyword scoring        (Bangla / English / Banglish)
+    3. quick_answers    ready answers from intents.json, filled with knowledge.json data
+    4. detailed knowledge   "in detail" sections, a specific project / tech / category,
+                            then — only if still unanswered — the LLM with the full knowledge base,
+                            and finally an offline keyword search.
+
+Steps 1-4 (except the LLM) are deterministic: they cost nothing, answer in milliseconds and work
+without any API key. Nothing is stored server-side: the browser sends the recent turns with each
+request, so a page reload starts a fresh conversation.
 """
 from __future__ import annotations
 
 import json
+import logging
 import os
-import re
 import time
 from collections import defaultdict, deque
+from contextlib import asynccontextmanager
 from pathlib import Path
 
 import httpx
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
+
+from answers import Responder
+from matcher import IntentRouter, load_config
 
 try:  # optional: load backend/.env if python-dotenv is installed
     from dotenv import load_dotenv
@@ -28,8 +39,12 @@ try:  # optional: load backend/.env if python-dotenv is installed
 except ImportError:
     pass
 
+log = logging.getLogger("jabuai")
+logging.basicConfig(level=os.getenv("LOG_LEVEL", "INFO"), format="%(asctime)s %(levelname)s %(name)s: %(message)s")
+
 BASE = Path(__file__).parent
 KB_PATH = BASE / "knowledge.json"
+INTENTS_PATH = BASE / "intents.json"
 
 LLM_PROVIDER = os.getenv("LLM_PROVIDER", "gemini").lower()  # gemini | openai
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
@@ -37,8 +52,20 @@ GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")  # any OpenAI-compatible API (Groq, OpenRouter, ...)
 OPENAI_BASE_URL = os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1")
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
-ALLOWED_ORIGINS = [o.strip() for o in os.getenv("ALLOWED_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173,https://jaber-portfolio.web.app,https://jaber-portfolio.firebaseapp.com").split(",") if o.strip()]
+ALLOWED_ORIGINS = [
+    o.strip()
+    for o in os.getenv(
+        "ALLOWED_ORIGINS",
+        "http://localhost:5173,http://127.0.0.1:5173,https://jaber-portfolio.web.app,https://jaber-portfolio.firebaseapp.com",
+    ).split(",")
+    if o.strip()
+]
 RATE_LIMIT_PER_MIN = int(os.getenv("RATE_LIMIT_PER_MIN", "20"))
+# 0 (default) = an intent/keyword match is ALWAYS answered from quick_answers.
+# N > 0 = messages with N+ words that match an intent are sent to the LLM instead (when configured),
+# useful for long, nuanced questions like "which project best shows his NLP skills?".
+LLM_ESCALATE_TOKENS = int(os.getenv("LLM_ESCALATE_TOKENS", "0"))
+TRUST_PROXY_HEADERS = os.getenv("TRUST_PROXY_HEADERS", "true").lower() in ("1", "true", "yes")
 
 MAX_QUESTION = 500
 MAX_HISTORY_TURNS = 8
@@ -73,15 +100,20 @@ def render_kb(kb: dict) -> str:
     L += ["", "## TECH STACK"] + [f"- {t['label']}: {', '.join(t['tools'])}" for t in kb["tech_stack"]]
     L += ["", f"## PROJECTS ({len(kb['projects'])} total)"]
     for pr in kb["projects"]:
-        links = " ".join(x for x in [f"GitHub: {pr['github']}" if pr["github"] else "", f"Live: {pr['live']}" if pr["live"] else ""] if x)
+        links = " ".join(
+            x for x in [f"GitHub: {pr['github']}" if pr["github"] else "", f"Live: {pr['live']}" if pr["live"] else ""] if x
+        )
         L.append(f"- [{pr['category']}] {pr['title']} — {pr['description']} Tech: {', '.join(pr['techs'])}. {pr['details']} {links}".strip())
     return "\n".join(L)
 
 
 KB = load_kb()
+CONFIG = load_config(INTENTS_PATH)
+BOT_NAME = CONFIG.get("bot_name", "JabuAi")
+RESPONDER = Responder(KB, CONFIG, IntentRouter(CONFIG))
 KB_TEXT = render_kb(KB)
 
-SYSTEM_PROMPT = f"""You are TumiAI, the friendly assistant on {KB['profile']['name']}'s portfolio website.
+SYSTEM_PROMPT = f"""You are {BOT_NAME}, the friendly assistant on {KB['profile']['name']}'s portfolio website.
 You answer visitors' questions about him: skills, projects, research, experience, education, resume and how to contact him.
 
 RULES
@@ -96,47 +128,11 @@ KNOWLEDGE BASE
 {KB_TEXT}
 """
 
-# ───────────────────────── routing helper ─────────────────────────
-
-ROUTES = [
-    ("/my_resume", r"resume|cv\b|curriculum|রেজিউম|সিভি|experience|education|degree|অভিজ্ঞতা|শিক্ষা"),
-    ("/contact", r"contact|email|mail|phone|number|hire|hiring|reach|whatsapp|যোগাযোগ|ইমেইল|ফোন|নাম্বার|নম্বর|jogajog"),
-    ("/projects", r"project|work|portfolio|demo|github|research|paper|built|প্রজেক্ট|কাজ|গবেষণা"),
-    ("/about", r"about|who|skill|tech|stack|tool|জানতে|পরিচয়|স্কিল|দক্ষতা"),
-]
-
-
-def guess_route(question: str) -> str | None:
-    q = question.lower()
-    for route, pattern in ROUTES:
-        if re.search(pattern, q):
-            return route
-    return None
-
-
-# ───────────────────────── offline fallback ─────────────────────────
-
-
-def fallback_answer(question: str) -> str:
-    """Used when no LLM key is configured or the LLM call fails."""
-    p, q = KB["profile"], question.lower()
-    route = guess_route(question)
-    if route == "/contact":
-        return f"Contact: {p['email']} | {p['phone']} | {p['location']}\nLinkedIn: {p['linkedin']}"
-    if route == "/my_resume":
-        lines = [f"- {e['title']} @ {e['org']} ({e['period']})" for e in KB["experience"]]
-        lines += [f"- {e['title']}, {e['org']} ({e['period']})" for e in KB["education"]]
-        return "Experience & education:\n" + "\n".join(lines)
-    if route == "/projects":
-        hits = [x for x in KB["projects"] if any(w in (x["title"] + " " + " ".join(x["techs"])).lower() for w in re.findall(r"\w{3,}", q))]
-        hits = (hits or KB["projects"])[:5]
-        return "Kichu projects:\n" + "\n".join(f"- {x['title']}: {x['description']}" for x in hits)
-    if route == "/about":
-        return "Tech stack:\n" + "\n".join(f"- {t['label']}: {', '.join(t['tools'][:6])}" for t in KB["tech_stack"])
-    return f"Ami TumiAI. {p['name']} ({p['title']}) shomporke skill, project, resume ba contact — jekono kichu jiggesh korte paren."
-
-
 # ───────────────────────── LLM clients ─────────────────────────
+
+
+def llm_configured() -> bool:
+    return bool(GEMINI_API_KEY) if LLM_PROVIDER == "gemini" else bool(OPENAI_API_KEY)
 
 
 async def call_gemini(client: httpx.AsyncClient, history: list[dict], question: str) -> str:
@@ -169,13 +165,21 @@ async def call_openai_compatible(client: httpx.AsyncClient, history: list[dict],
     return r.json()["choices"][0]["message"]["content"].strip()
 
 
-def llm_configured() -> bool:
-    return bool(GEMINI_API_KEY) if LLM_PROVIDER == "gemini" else bool(OPENAI_API_KEY)
-
-
 # ───────────────────────── API ─────────────────────────
 
-app = FastAPI(title="TumiAI Portfolio Chatbot")
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    app.state.http = httpx.AsyncClient(timeout=25)  # one pooled client for all LLM calls
+    log.info(
+        "%s ready — %d projects, %d intents, llm=%s",
+        BOT_NAME, len(KB["projects"]), len(CONFIG["intents"]), LLM_PROVIDER if llm_configured() else "off",
+    )
+    yield
+    await app.state.http.aclose()
+
+
+app = FastAPI(title=f"{BOT_NAME} Portfolio Chatbot", lifespan=lifespan)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=ALLOWED_ORIGINS,
@@ -184,16 +188,30 @@ app.add_middleware(
 )
 
 _hits: dict[str, deque] = defaultdict(deque)
+_last_sweep = time.monotonic()
+
+
+def _client_ip(request: Request) -> str:
+    if TRUST_PROXY_HEADERS:
+        fwd = request.headers.get("x-forwarded-for")
+        if fwd:
+            return fwd.split(",")[0].strip()
+    return request.client.host if request.client else "?"
 
 
 def rate_limit(request: Request) -> None:
-    ip = request.headers.get("x-forwarded-for", request.client.host if request.client else "?").split(",")[0].strip()
-    now, window = time.monotonic(), _hits[ip]
+    global _last_sweep
+    ip, now = _client_ip(request), time.monotonic()
+    window = _hits[ip]
     while window and now - window[0] > 60:
         window.popleft()
     if len(window) >= RATE_LIMIT_PER_MIN:
         raise HTTPException(429, "Too many messages — please wait a minute.")
     window.append(now)
+    if now - _last_sweep > 300:  # drop idle IPs so the dict cannot grow forever
+        _last_sweep = now
+        for key in [k for k, v in _hits.items() if not v or now - v[-1] > 60]:
+            _hits.pop(key, None)
 
 
 class Turn(BaseModel):
@@ -203,38 +221,66 @@ class Turn(BaseModel):
 
 class AskRequest(BaseModel):
     question: str = Field(min_length=1, max_length=MAX_QUESTION)
-    history: list[Turn] = []  # recent turns kept in the browser's memory only
+    history: list[Turn] = Field(default_factory=list, max_length=50)  # recent turns, kept in the browser only
 
 
 class AskResponse(BaseModel):
     answer: str
     route: str | None = None
-    source: str  # "llm" | "fallback"
+    source: str  # intent | keyword | detail | llm | search | fallback
+    intent: str | None = None  # matched intent id(s), comma separated
+    lang: str = "en"  # en | bn | bn_roman
 
 
 @app.get("/health")
 def health():
-    return {"ok": True, "provider": LLM_PROVIDER, "llm_configured": llm_configured(), "projects": len(KB["projects"])}
+    return {
+        "ok": True,
+        "bot": BOT_NAME,
+        "provider": LLM_PROVIDER,
+        "llm_configured": llm_configured(),
+        "projects": len(KB["projects"]),
+        "intents": len(CONFIG["intents"]),
+    }
 
 
 @app.post("/ask", response_model=AskResponse)
 async def ask(body: AskRequest, request: Request):
     rate_limit(request)
     question = body.question.strip()
-    route = guess_route(question)
+    if not question:
+        raise HTTPException(422, "Question is empty.")
+
+    # Steps 1-4: intents → keywords → quick_answers → detailed knowledge (all offline)
+    reply = RESPONDER.resolve(question)
+    intent_id = ",".join(reply.intents) or None
+    escalate = (
+        LLM_ESCALATE_TOKENS > 0
+        and llm_configured()
+        and reply.source in ("intent", "keyword")
+        and len(question.split()) >= LLM_ESCALATE_TOKENS
+    )
+    if reply.answer and not escalate:
+        return AskResponse(answer=reply.answer, route=reply.route, source=reply.source, intent=intent_id, lang=reply.lang)
+
+    # Step 4 (generative): LLM over the full knowledge base
     history = [{"role": t.role, "text": t.text[:MAX_HISTORY_CHARS]} for t in body.history[-MAX_HISTORY_TURNS:]]
-    # Gemini requires the conversation to start with a user turn
-    while history and history[0]["role"] != "user":
+    while history and history[0]["role"] != "user":  # Gemini requires the conversation to start with a user turn
         history.pop(0)
 
     if llm_configured():
         try:
-            async with httpx.AsyncClient(timeout=25) as client:
-                fn = call_gemini if LLM_PROVIDER == "gemini" else call_openai_compatible
-                answer = await fn(client, history, question)
+            fn = call_gemini if LLM_PROVIDER == "gemini" else call_openai_compatible
+            answer = await fn(request.app.state.http, history, question)
             if answer:
-                return AskResponse(answer=answer, route=route, source="llm")
+                return AskResponse(answer=answer, route=reply.route, source="llm", intent=intent_id, lang=reply.lang)
         except Exception as exc:  # network error, quota, bad key, blocked response...
-            print(f"[TumiAI] LLM call failed: {type(exc).__name__}: {exc}")
+            log.warning("LLM call failed: %s: %s", type(exc).__name__, exc)
 
-    return AskResponse(answer=fallback_answer(question), route=route, source="fallback")
+    # Last resort: if escalation failed, still serve the quick answer; otherwise offline search / help text
+    if reply.answer:
+        return AskResponse(answer=reply.answer, route=reply.route, source=reply.source, intent=intent_id, lang=reply.lang)
+    found = RESPONDER.search(RESPONDER.router.route(question))
+    if found:
+        return AskResponse(answer=found, route="/projects", source="search", lang=reply.lang)
+    return AskResponse(answer=RESPONDER.no_match(reply.lang), route="/contact", source="fallback", lang=reply.lang)

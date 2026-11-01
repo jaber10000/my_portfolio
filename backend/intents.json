@@ -1,0 +1,1481 @@
+{
+  "version": 1,
+  "bot_name": "JabuAi",
+  "generic_max_tokens": 6,
+  "max_sections": 3,
+  "banglish_markers": [
+    "ami",
+    "tumi",
+    "apni",
+    "tomar",
+    "apnar",
+    "amar",
+    "koyta",
+    "koyti",
+    "kothay",
+    "ki",
+    "kii",
+    "ache",
+    "achhe",
+    "koto",
+    "bolo",
+    "bolun",
+    "jante",
+    "jante",
+    "chai",
+    "chaichi",
+    "kemon",
+    "acho",
+    "achen",
+    "dao",
+    "din",
+    "kon",
+    "kibhabe",
+    "ekhon",
+    "kore",
+    "kori",
+    "hoyeche",
+    "amake",
+    "jonno",
+    "niye",
+    "somporke",
+    "shomporke",
+    "dekhan",
+    "dekhao",
+    "bishoye",
+    "gulo",
+    "gula",
+    "ase",
+    "nai",
+    "korechen"
+  ],
+  "detail_markers": [
+    "in detail",
+    "details",
+    "detail",
+    "detailed",
+    "elaborate",
+    "explain",
+    "more about",
+    "tell me more",
+    "bistarito",
+    "bistarit",
+    "bistariti",
+    "details e",
+    "bishod",
+    "sob bolo",
+    "puro",
+    "বিস্তারিত",
+    "বিস্তারিতভাবে",
+    "বিশদ",
+    "সব বলো",
+    "সবকিছু",
+    "পুরো",
+    "ব্যাখ্যা"
+  ],
+  "intents": [
+    {
+      "id": "greeting",
+      "smalltalk": true,
+      "route": null,
+      "phrases": {
+        "en": [
+          "hi",
+          "hello",
+          "hey",
+          "hii",
+          "good morning",
+          "good afternoon",
+          "good evening",
+          "how are you",
+          "whats up",
+          "hlw",
+          "helo",
+          "hellooo",
+          "yo",
+          "sup",
+          "walaikum assalam",
+          "wa alaikum assalam",
+          "walaikumussalam",
+          "wa alaykum assalam",
+          "nice to meet you",
+          "good night"
+        ],
+        "bn": [
+          "হ্যালো",
+          "হাই",
+          "হাইয়া",
+          "সালাম",
+          "আসসালামু আলাইকুম",
+          "আসসালামুয়ালাইকুম",
+          "আসসালামু আলাইকুম",
+          "কেমন আছো",
+          "কেমন আছেন",
+          "কেমন আছ",
+          "নমস্কার",
+          "শুভ সকাল",
+          "ওয়ালাইকুম আসসালাম",
+          "ওয়া আলাইকুম আসসালাম",
+          "কেমন আছো তুমি",
+          "কি খবর"
+        ],
+        "bn_roman": [
+          "salam",
+          "assalamu alaikum",
+          "assalamualaikum",
+          "as salamu alaikum",
+          "kemon acho",
+          "kemon achen",
+          "kemon aso",
+          "ki khobor",
+          "kire",
+          "shuvo shokal",
+          "asslamualaikum",
+          "asalamualaikum",
+          "assalamu walaikum",
+          "assalamu alaikum",
+          "salamualaikum",
+          "slamualaikum",
+          "assalamualaikum wa rahmatullah",
+          "namaskar",
+          "kemon aco",
+          "kemon asen",
+          "kemon ache",
+          "kemon achho",
+          "kemon achhen",
+          "kemon ase",
+          "kmn acho",
+          "kmn aso",
+          "kmn asen",
+          "kemon achi",
+          "walaikum assalam",
+          "waalaikum assalam",
+          "walaikumussalam",
+          "wa alaikum assalam",
+          "hlw",
+          "vlo achen",
+          "valo achen",
+          "valo acho",
+          "bhalo acho",
+          "bhalo achen",
+          "ki obostha",
+          "kemon cholche",
+          "ki khobor tomar"
+        ]
+      },
+      "keywords": {
+        "en": [],
+        "bn": [],
+        "bn_roman": []
+      }
+    },
+    {
+      "id": "thanks",
+      "smalltalk": true,
+      "route": null,
+      "phrases": {
+        "en": [
+          "thanks",
+          "thank you",
+          "thx",
+          "ty",
+          "appreciate it",
+          "great job",
+          "awesome"
+        ],
+        "bn": [
+          "ধন্যবাদ",
+          "থ্যাংকস",
+          "থ্যাংক ইউ",
+          "শুকরিয়া",
+          "জাজাকাল্লাহ",
+          "ধন্যবাদ জানাই"
+        ],
+        "bn_roman": [
+          "dhonnobad",
+          "dhonyobad",
+          "donnobad",
+          "shukriya",
+          "jazakallah",
+          "thanks bhai",
+          "thank you bhai"
+        ]
+      },
+      "keywords": {
+        "en": [],
+        "bn": [],
+        "bn_roman": []
+      }
+    },
+    {
+      "id": "goodbye",
+      "smalltalk": true,
+      "route": null,
+      "phrases": {
+        "en": [
+          "bye",
+          "goodbye",
+          "see you",
+          "see ya",
+          "take care",
+          "good night"
+        ],
+        "bn": [
+          "বাই",
+          "বিদায়",
+          "আল্লাহ হাফেজ",
+          "খোদা হাফেজ",
+          "শুভ রাত্রি",
+          "পরে কথা হবে"
+        ],
+        "bn_roman": [
+          "allah hafez",
+          "khoda hafez",
+          "pore kotha hobe",
+          "bye bye",
+          "shuvo ratri"
+        ]
+      },
+      "keywords": {
+        "en": [],
+        "bn": [],
+        "bn_roman": []
+      }
+    },
+    {
+      "id": "bot_identity",
+      "route": "/about",
+      "phrases": {
+        "en": [
+          "who are you",
+          "what are you",
+          "your name",
+          "what is your name",
+          "whats your name",
+          "are you a bot",
+          "are you ai",
+          "are you human",
+          "what can you do",
+          "how can you help",
+          "what do you do",
+          "who r u",
+          "who are u",
+          "introduce yourself",
+          "tell me about yourself bot",
+          "who made you",
+          "who built you",
+          "who created you",
+          "who developed you",
+          "help",
+          "help me",
+          "what can i ask",
+          "what can i ask you",
+          "what should i ask",
+          "how do you work",
+          "are you chatgpt"
+        ],
+        "bn": [
+          "তুমি কে",
+          "আপনি কে",
+          "তোমার নাম",
+          "আপনার নাম",
+          "তুমি কি বট",
+          "তুমি কি এআই",
+          "তুমি কী করতে পারো",
+          "আপনি কী করতে পারেন",
+          "তোমাকে কে বানিয়েছে",
+          "আপনাকে কে বানিয়েছে",
+          "তুমি কী",
+          "আপনি কী",
+          "সাহায্য",
+          "হেল্প",
+          "কী জিজ্ঞেস করতে পারি"
+        ],
+        "bn_roman": [
+          "tumi ke",
+          "apni ke",
+          "tomar nam",
+          "apnar nam",
+          "tomar naam",
+          "apnar naam",
+          "tumi ki bot",
+          "tumi ki ai",
+          "tumi ki korte paro",
+          "apni ki korte paren",
+          "ki ki korte paro",
+          "tumi ki",
+          "apni ki",
+          "tumi ke bolo",
+          "tomake ke banaise",
+          "tomake ke baniyeche",
+          "tomake ke baniyese",
+          "apnake ke baniyeche",
+          "tomar creator ke",
+          "help koro",
+          "help",
+          "shahajjo",
+          "ki ki jiggesh korte pari",
+          "ki jiggesh korte pari",
+          "ki ki jiggesh korbo",
+          "ki ki jante pari",
+          "ki ki bolte paro",
+          "ki ki paro",
+          "tumi ki ki paro",
+          "tumi ki ki korte paro"
+        ]
+      },
+      "keywords": {
+        "en": [
+          "jabuai",
+          "chatbot"
+        ],
+        "bn": [
+          "জাবুএআই",
+          "চ্যাটবট"
+        ],
+        "bn_roman": [
+          "jabuai",
+          "jabu ai",
+          "chatbot"
+        ]
+      }
+    },
+    {
+      "id": "about",
+      "generic": true,
+      "route": "/about",
+      "phrases": {
+        "en": [
+          "about jaber",
+          "about him",
+          "about himself",
+          "about yourself",
+          "about you",
+          "about me",
+          "who is jaber",
+          "who is he",
+          "who is this",
+          "tell me about him",
+          "introduce yourself",
+          "introduce him",
+          "his profile",
+          "his bio",
+          "profile summary"
+        ],
+        "bn": [
+          "জাবের সম্পর্কে",
+          "তার সম্পর্কে",
+          "তোমার সম্পর্কে",
+          "আপনার সম্পর্কে",
+          "জাবের কে",
+          "সে কে",
+          "উনি কে",
+          "পরিচয় দাও",
+          "পরিচয় দিন",
+          "নিজের সম্পর্কে"
+        ],
+        "bn_roman": [
+          "jaber somporke",
+          "jaber shomporke",
+          "tar somporke",
+          "tar shomporke",
+          "tomar somporke",
+          "tomar shomporke",
+          "apnar somporke",
+          "apnar shomporke",
+          "jaber ke",
+          "se ke",
+          "uni ke",
+          "poricoy dao",
+          "porichoy dao",
+          "nijer somporke",
+          "tomake niye"
+        ]
+      },
+      "keywords": {
+        "en": [
+          "about",
+          "bio",
+          "biography",
+          "profile",
+          "introduction",
+          "introduce",
+          "summary",
+          "overview"
+        ],
+        "bn": [
+          "সম্পর্কে",
+          "পরিচয়",
+          "পরিচিতি",
+          "জীবনী",
+          "বায়ো",
+          "প্রোফাইল"
+        ],
+        "bn_roman": [
+          "somporke",
+          "shomporke",
+          "sompokke",
+          "poricoy",
+          "porichoy",
+          "poricity",
+          "jibon",
+          "jiboni",
+          "profile",
+          "bio"
+        ]
+      }
+    },
+    {
+      "id": "education",
+      "route": "/my_resume",
+      "phrases": {
+        "en": [
+          "educational background",
+          "academic background",
+          "where did he study",
+          "where did jaber study",
+          "what did he study",
+          "his degree",
+          "his education",
+          "your education",
+          "which university",
+          "study background"
+        ],
+        "bn": [
+          "শিক্ষাগত যোগ্যতা",
+          "শিক্ষাগত পটভূমি",
+          "কোথায় পড়েছ",
+          "কোথায় পড়েছেন",
+          "কোথায় পড়াশোনা",
+          "কোন বিশ্ববিদ্যালয়",
+          "কোন ভার্সিটি",
+          "লেখাপড়া কতদূর"
+        ],
+        "bn_roman": [
+          "shikkhagoto joggota",
+          "shikkha ghoto joggota",
+          "kothay porechen",
+          "kothay porechho",
+          "kothay porashona",
+          "kon university",
+          "kon varsity",
+          "kon vorsity",
+          "lekhapora kotodur",
+          "porashona kotodur"
+        ]
+      },
+      "keywords": {
+        "en": [
+          "education",
+          "educational",
+          "degree",
+          "bsc",
+          "hsc",
+          "ssc",
+          "university",
+          "college",
+          "school",
+          "academic",
+          "academics",
+          "qualification",
+          "qualifications",
+          "graduate",
+          "graduation",
+          "studied",
+          "study",
+          "cgpa",
+          "gpa",
+          "madrasah",
+          "madrasa"
+        ],
+        "bn": [
+          "শিক্ষা",
+          "শিক্ষাগত",
+          "ডিগ্রি",
+          "বিশ্ববিদ্যালয়",
+          "ভার্সিটি",
+          "কলেজ",
+          "স্কুল",
+          "মাদ্রাসা",
+          "পড়াশোনা",
+          "লেখাপড়া",
+          "পড়েছ",
+          "পড়েছেন",
+          "যোগ্যতা",
+          "স্নাতক",
+          "এইচএসসি",
+          "এসএসসি",
+          "সিজিপিএ"
+        ],
+        "bn_roman": [
+          "shikkha",
+          "shikha",
+          "sikkha",
+          "shikhkha",
+          "shikkhagoto",
+          "porashona",
+          "porasona",
+          "lekhapora",
+          "lekha pora",
+          "degree",
+          "varsity",
+          "vorsity",
+          "university",
+          "college",
+          "joggota",
+          "yogyota",
+          "porechen",
+          "porechho",
+          "madrasa"
+        ]
+      }
+    },
+    {
+      "id": "experience",
+      "route": "/my_resume",
+      "phrases": {
+        "en": [
+          "work experience",
+          "work history",
+          "professional experience",
+          "employment history",
+          "where does he work",
+          "where do you work",
+          "where did he work",
+          "current job",
+          "current role",
+          "his experience",
+          "your experience",
+          "career history",
+          "past jobs"
+        ],
+        "bn": [
+          "কাজের অভিজ্ঞতা",
+          "কর্ম অভিজ্ঞতা",
+          "কর্মজীবন",
+          "কোথায় কাজ করে",
+          "কোথায় কাজ করেন",
+          "কোথায় চাকরি",
+          "বর্তমান চাকরি",
+          "বর্তমান কাজ"
+        ],
+        "bn_roman": [
+          "kajer obhiggota",
+          "kajer ovigota",
+          "kajer obhijnota",
+          "kothay kaj kore",
+          "kothay kaj koren",
+          "kothay chakri",
+          "ekhon kothay kaj",
+          "bortoman chakri",
+          "bortoman job",
+          "karmo jibon",
+          "kormojibon"
+        ]
+      },
+      "keywords": {
+        "en": [
+          "experience",
+          "experiences",
+          "experienced",
+          "job",
+          "jobs",
+          "career",
+          "employment",
+          "employer",
+          "company",
+          "position",
+          "internship",
+          "intern",
+          "worked",
+          "working",
+          "employed",
+          "occupation",
+          "profession",
+          "professional",
+          "role"
+        ],
+        "bn": [
+          "অভিজ্ঞতা",
+          "চাকরি",
+          "চাকরী",
+          "জব",
+          "ক্যারিয়ার",
+          "কর্মজীবন",
+          "কোম্পানি",
+          "কোম্পানী",
+          "পেশা",
+          "ইন্টার্ন",
+          "ইন্টার্নশিপ",
+          "পদবী",
+          "পদ"
+        ],
+        "bn_roman": [
+          "obhiggota",
+          "obhijnota",
+          "obhigota",
+          "ovigota",
+          "oviggota",
+          "obhiggyota",
+          "chakri",
+          "chakuri",
+          "job",
+          "career",
+          "company",
+          "pesha",
+          "peshar",
+          "intern",
+          "internship",
+          "kormo",
+          "karmo"
+        ]
+      }
+    },
+    {
+      "id": "achievements",
+      "route": "/about",
+      "phrases": {
+        "en": [
+          "his achievements",
+          "your achievements",
+          "what has he achieved",
+          "what did he win",
+          "awards won",
+          "any award",
+          "any awards",
+          "any certificate",
+          "any certification",
+          "milestones reached"
+        ],
+        "bn": [
+          "কী অর্জন",
+          "কি অর্জন",
+          "কোনো পুরস্কার",
+          "কোন পুরস্কার",
+          "কোনো সার্টিফিকেট",
+          "কোন সার্টিফিকেট",
+          "কোনো অর্জন"
+        ],
+        "bn_roman": [
+          "ki orjon",
+          "kon puroshkar",
+          "kono puroshkar",
+          "kono orjon",
+          "kono certificate",
+          "kono sofolota",
+          "ki ki orjon"
+        ]
+      },
+      "keywords": {
+        "en": [
+          "achievement",
+          "achievements",
+          "achieve",
+          "achieved",
+          "award",
+          "awards",
+          "won",
+          "winner",
+          "win",
+          "prize",
+          "recognition",
+          "milestone",
+          "milestones",
+          "honor",
+          "honors",
+          "honour",
+          "certificate",
+          "certificates",
+          "certification",
+          "certifications",
+          "accomplishment",
+          "accomplishments",
+          "contest",
+          "competition",
+          "success"
+        ],
+        "bn": [
+          "অর্জন",
+          "অর্জনসমূহ",
+          "সাফল্য",
+          "সফলতা",
+          "পুরস্কার",
+          "পুরষ্কার",
+          "কৃতিত্ব",
+          "স্বীকৃতি",
+          "সার্টিফিকেট",
+          "প্রতিযোগিতা",
+          "বিজয়ী",
+          "অ্যাচিভমেন্ট",
+          "এচিভমেন্ট",
+          "অ্যাওয়ার্ড"
+        ],
+        "bn_roman": [
+          "orjon",
+          "ortion",
+          "orjoner",
+          "sofolota",
+          "safollo",
+          "sofollo",
+          "puroshkar",
+          "purushkar",
+          "kritto",
+          "krittyo",
+          "kritittyo",
+          "shikriti",
+          "sikriti",
+          "certificate",
+          "achievement",
+          "award",
+          "contest",
+          "protijogita",
+          "bijoyi",
+          "winner"
+        ]
+      }
+    },
+    {
+      "id": "research",
+      "route": "/projects",
+      "phrases": {
+        "en": [
+          "research work",
+          "research papers",
+          "research paper",
+          "research projects",
+          "research areas",
+          "research interests",
+          "research contributions",
+          "published papers",
+          "any publications",
+          "any papers",
+          "his research",
+          "your research",
+          "federated learning research"
+        ],
+        "bn": [
+          "গবেষণা কাজ",
+          "গবেষণা পত্র",
+          "গবেষণাপত্র",
+          "গবেষণার কাজ",
+          "রিসার্চ পেপার",
+          "রিসার্চ প্রজেক্ট",
+          "রিসার্চ কাজ",
+          "কোনো পেপার",
+          "কোন পেপার",
+          "কী গবেষণা",
+          "কি গবেষণা"
+        ],
+        "bn_roman": [
+          "gobeshona kaj",
+          "gobeshonar kaj",
+          "research paper",
+          "research er kaj",
+          "research kaj",
+          "research projects",
+          "kono paper",
+          "ki gobeshona",
+          "gobeshona ki",
+          "research ki"
+        ]
+      },
+      "keywords": {
+        "en": [
+          "research",
+          "researcher",
+          "researches",
+          "paper",
+          "papers",
+          "publication",
+          "publications",
+          "published",
+          "journal",
+          "journals",
+          "thesis",
+          "scholarly",
+          "scientific"
+        ],
+        "bn": [
+          "গবেষণা",
+          "গবেষক",
+          "রিসার্চ",
+          "পেপার",
+          "প্রকাশনা",
+          "প্রকাশিত",
+          "জার্নাল",
+          "থিসিস",
+          "গবেষণাপত্র",
+          "বৈজ্ঞানিক"
+        ],
+        "bn_roman": [
+          "gobeshona",
+          "gobesona",
+          "goveshona",
+          "gobeshok",
+          "gobeshonar",
+          "research",
+          "paper",
+          "papers",
+          "publication",
+          "journal",
+          "thesis",
+          "prokashona",
+          "prokashito"
+        ]
+      }
+    },
+    {
+      "id": "projects",
+      "route": "/projects",
+      "phrases": {
+        "en": [
+          "how many projects",
+          "list of projects",
+          "project list",
+          "all projects",
+          "his projects",
+          "your projects",
+          "what projects",
+          "which projects",
+          "show projects",
+          "show me projects",
+          "projects built",
+          "portfolio projects",
+          "live demos",
+          "live demo",
+          "github repos",
+          "what has he built",
+          "what did he build",
+          "what have you built",
+          "what did you build"
+        ],
+        "bn": [
+          "কয়টা প্রজেক্ট",
+          "কয়টি প্রজেক্ট",
+          "কতগুলো প্রজেক্ট",
+          "কত গুলো প্রজেক্ট",
+          "কয়টা প্রোজেক্ট",
+          "প্রজেক্টের তালিকা",
+          "প্রজেক্ট লিস্ট",
+          "কী কী প্রজেক্ট",
+          "কি কি প্রজেক্ট",
+          "কী বানিয়েছ",
+          "কী বানিয়েছেন",
+          "কি বানিয়েছ",
+          "কি বানিয়েছেন",
+          "লাইভ ডেমো"
+        ],
+        "bn_roman": [
+          "koyta project",
+          "koyti project",
+          "kotogulo project",
+          "koyta projects",
+          "project koyta",
+          "projects koyta",
+          "project koyti",
+          "projects koyti",
+          "project er list",
+          "projects er list",
+          "ki ki project",
+          "ki ki projects",
+          "ki banieche",
+          "ki baniyecho",
+          "ki baniyechen",
+          "ki baniyeche",
+          "ki banaecho",
+          "ki banaiyecho",
+          "live demo"
+        ]
+      },
+      "keywords": {
+        "en": [
+          "project",
+          "projects",
+          "portfolio",
+          "demo",
+          "demos",
+          "repo",
+          "repos",
+          "repository",
+          "repositories",
+          "apps",
+          "app",
+          "application",
+          "applications",
+          "products",
+          "samples"
+        ],
+        "bn": [
+          "প্রজেক্ট",
+          "প্রোজেক্ট",
+          "প্রজেক্টস",
+          "প্রকল্প",
+          "কাজগুলো",
+          "কাজগুলি",
+          "ডেমো",
+          "পোর্টফোলিও",
+          "অ্যাপ",
+          "এপ্লিকেশন",
+          "অ্যাপ্লিকেশন",
+          "বানিয়েছ",
+          "বানিয়েছেন",
+          "তৈরি করেছ",
+          "তৈরি করেছেন"
+        ],
+        "bn_roman": [
+          "project",
+          "projects",
+          "projectgulo",
+          "projectgula",
+          "portfolio",
+          "demo",
+          "banieche",
+          "baniyecho",
+          "baniyechen",
+          "baniyeche",
+          "banaiyecho",
+          "banaiyechen",
+          "tairi",
+          "toiri",
+          "kajgulo",
+          "kajgula",
+          "kajer list",
+          "app"
+        ]
+      }
+    },
+    {
+      "id": "skills",
+      "route": "/about",
+      "phrases": {
+        "en": [
+          "tech stack",
+          "technology stack",
+          "what technologies",
+          "which technologies",
+          "what tools",
+          "which tools",
+          "programming languages",
+          "what languages",
+          "does he know",
+          "can he code",
+          "what can he do",
+          "his skills",
+          "your skills",
+          "skill set",
+          "areas of expertise"
+        ],
+        "bn": [
+          "টেক স্ট্যাক",
+          "কী কী স্কিল",
+          "কি কি স্কিল",
+          "কী স্কিল",
+          "কোন টেকনোলজি",
+          "কী কী টুলস",
+          "কি কি টুলস",
+          "প্রোগ্রামিং ল্যাঙ্গুয়েজ",
+          "কী কী জানো",
+          "কি কি জানো",
+          "কী কী জানেন",
+          "কি কি জানেন"
+        ],
+        "bn_roman": [
+          "tech stack",
+          "ki ki skill",
+          "ki skill",
+          "kon technology",
+          "kon tools",
+          "ki ki tools",
+          "programming language",
+          "ki ki jano",
+          "ki ki janen",
+          "ki ki jane",
+          "koto ta skill",
+          "kon kon language"
+        ]
+      },
+      "keywords": {
+        "en": [
+          "skill",
+          "skills",
+          "skillset",
+          "tech",
+          "technology",
+          "technologies",
+          "stack",
+          "tools",
+          "tool",
+          "languages",
+          "framework",
+          "frameworks",
+          "libraries",
+          "expertise",
+          "proficient",
+          "proficiency",
+          "capabilities",
+          "competencies",
+          "technical"
+        ],
+        "bn": [
+          "স্কিল",
+          "স্কিলস",
+          "দক্ষতা",
+          "দক্ষতাসমূহ",
+          "টেকনোলজি",
+          "প্রযুক্তি",
+          "স্ট্যাক",
+          "টুলস",
+          "টুল",
+          "ফ্রেমওয়ার্ক",
+          "লাইব্রেরি",
+          "ল্যাঙ্গুয়েজ",
+          "ভাষা",
+          "পারদর্শী",
+          "পারদর্শিতা"
+        ],
+        "bn_roman": [
+          "skill",
+          "skills",
+          "skiil",
+          "skil",
+          "dokkhota",
+          "dokhota",
+          "dakkhota",
+          "technology",
+          "tech",
+          "stack",
+          "tools",
+          "tool",
+          "framework",
+          "language",
+          "languages",
+          "jano",
+          "janen",
+          "pardorshi",
+          "prozukti",
+          "projukti"
+        ]
+      }
+    },
+    {
+      "id": "resume",
+      "route": "/my_resume",
+      "phrases": {
+        "en": [
+          "resume",
+          "curriculum vitae",
+          "download cv",
+          "download resume",
+          "his cv",
+          "your cv",
+          "see resume",
+          "see cv",
+          "send cv",
+          "send resume"
+        ],
+        "bn": [
+          "রেজিউম",
+          "রেজুমে",
+          "রিজিউম",
+          "সিভি",
+          "সিভি দাও",
+          "সিভি দেখাও",
+          "রেজিউম দেখাও"
+        ],
+        "bn_roman": [
+          "resume dao",
+          "cv dao",
+          "cv dekhao",
+          "resume dekhao",
+          "cv pathao",
+          "resume pathao",
+          "cv download"
+        ]
+      },
+      "keywords": {
+        "en": [
+          "resume",
+          "cv",
+          "curriculum",
+          "vitae",
+          "biodata"
+        ],
+        "bn": [
+          "রেজিউম",
+          "রেজুমে",
+          "রিজিউম",
+          "সিভি",
+          "বায়োডাটা",
+          "জীবনবৃত্তান্ত"
+        ],
+        "bn_roman": [
+          "resume",
+          "cv",
+          "biodata",
+          "jibonbrittanto",
+          "jiboni"
+        ]
+      },
+      "weak": true
+    },
+    {
+      "id": "contact",
+      "route": "/contact",
+      "phrases": {
+        "en": [
+          "contact info",
+          "contact details",
+          "contact him",
+          "contact jaber",
+          "get in touch",
+          "reach him",
+          "reach out",
+          "how to contact",
+          "how can i contact",
+          "how can i reach",
+          "hire him",
+          "hire jaber",
+          "work together",
+          "work with him",
+          "where does he live",
+          "email address",
+          "phone number",
+          "mobile number",
+          "social links",
+          "social media",
+          "his number",
+          "your number",
+          "give me his number"
+        ],
+        "bn": [
+          "যোগাযোগ করব",
+          "যোগাযোগ করতে",
+          "যোগাযোগের মাধ্যম",
+          "যোগাযোগের ঠিকানা",
+          "ইমেইল ঠিকানা",
+          "ফোন নম্বর",
+          "ফোন নাম্বার",
+          "মোবাইল নম্বর",
+          "মোবাইল নাম্বার",
+          "কোথায় থাকে",
+          "কোথায় থাকেন",
+          "কিভাবে যোগাযোগ",
+          "কীভাবে যোগাযোগ",
+          "নিয়োগ দিতে",
+          "হায়ার করতে",
+          "একসাথে কাজ",
+          "তোমার নম্বর",
+          "আপনার নম্বর",
+          "নম্বর দাও",
+          "নম্বর দিন",
+          "তোমার নাম্বার",
+          "আপনার নাম্বার"
+        ],
+        "bn_roman": [
+          "jogajog korbo",
+          "jogajog korte",
+          "jogajoger maddhom",
+          "kivabe jogajog",
+          "kibhabe jogajog",
+          "kibhabe contact",
+          "kivabe contact",
+          "contact korbo",
+          "contact korte",
+          "phone number",
+          "phone nombor",
+          "mobile number",
+          "mobile nombor",
+          "email address",
+          "kothay thake",
+          "kothay thaken",
+          "hire korte",
+          "hire korbo",
+          "ekshathe kaj",
+          "ekshate kaj",
+          "social link",
+          "tomar number",
+          "apnar number",
+          "number dao",
+          "tar number"
+        ]
+      },
+      "keywords": {
+        "en": [
+          "contact",
+          "contacts",
+          "email",
+          "emails",
+          "mail",
+          "gmail",
+          "phone",
+          "mobile",
+          "whatsapp",
+          "hire",
+          "hiring",
+          "reach",
+          "address",
+          "location",
+          "linkedin",
+          "facebook",
+          "social",
+          "touch",
+          "freelance",
+          "collaborate",
+          "collaboration",
+          "available",
+          "availability",
+          "recruit",
+          "recruiter",
+          "offer",
+          "github"
+        ],
+        "bn": [
+          "যোগাযোগ",
+          "ইমেইল",
+          "ইমেল",
+          "মেইল",
+          "জিমেইল",
+          "ফোন",
+          "মোবাইল",
+          "নম্বর",
+          "নাম্বার",
+          "ঠিকানা",
+          "হোয়াটসঅ্যাপ",
+          "হোয়াটসঅ্যাপ",
+          "লিঙ্কডইন",
+          "ফেসবুক",
+          "হায়ার",
+          "নিয়োগ",
+          "ফ্রিল্যান্স",
+          "লোকেশন",
+          "অবস্থান",
+          "গিটহাব"
+        ],
+        "bn_roman": [
+          "jogajog",
+          "jogajogh",
+          "jogajug",
+          "yogayog",
+          "jogajoger",
+          "contact",
+          "email",
+          "mail",
+          "gmail",
+          "phone",
+          "mobile",
+          "nombor",
+          "nambar",
+          "namber",
+          "whatsapp",
+          "thikana",
+          "address",
+          "location",
+          "linkedin",
+          "facebook",
+          "hire",
+          "freelance",
+          "github"
+        ]
+      }
+    }
+  ],
+  "category_aliases": {
+    "ml": {
+      "en": [
+        "machine learning projects",
+        "ml projects",
+        "ai projects",
+        "ai ml projects",
+        "deep learning projects",
+        "nlp projects",
+        "computer vision projects"
+      ],
+      "bn": [
+        "মেশিন লার্নিং প্রজেক্ট",
+        "এআই প্রজেক্ট",
+        "এমএল প্রজেক্ট"
+      ],
+      "bn_roman": [
+        "machine learning project",
+        "ml project",
+        "ai project",
+        "ai er project"
+      ]
+    },
+    "full stack": {
+      "en": [
+        "full stack projects",
+        "fullstack projects",
+        "web development projects",
+        "web projects",
+        "backend projects"
+      ],
+      "bn": [
+        "ফুল স্ট্যাক প্রজেক্ট",
+        "ওয়েব প্রজেক্ট"
+      ],
+      "bn_roman": [
+        "full stack project",
+        "fullstack project",
+        "web project",
+        "web development project"
+      ]
+    },
+    "react": {
+      "en": [
+        "react projects",
+        "frontend projects",
+        "front end projects",
+        "front-end projects"
+      ],
+      "bn": [
+        "রিয়্যাক্ট প্রজেক্ট",
+        "ফ্রন্টএন্ড প্রজেক্ট"
+      ],
+      "bn_roman": [
+        "react project",
+        "frontend project",
+        "front end project"
+      ]
+    },
+    "python": {
+      "en": [
+        "other projects",
+        "automation projects",
+        "mobile projects",
+        "flutter projects",
+        "n8n projects",
+        "workflow projects"
+      ],
+      "bn": [
+        "অন্যান্য প্রজেক্ট",
+        "অটোমেশন প্রজেক্ট",
+        "মোবাইল অ্যাপ প্রজেক্ট"
+      ],
+      "bn_roman": [
+        "other project",
+        "automation project",
+        "mobile project",
+        "flutter project",
+        "n8n project"
+      ]
+    }
+  },
+  "detail_headers": {
+    "about": {
+      "en": "About Jaber",
+      "bn": "জাবের সম্পর্কে",
+      "bn_roman": "Jaber shomporke"
+    },
+    "education": {
+      "en": "Education (details)",
+      "bn": "শিক্ষা (বিস্তারিত)",
+      "bn_roman": "Education (bistarito)"
+    },
+    "experience": {
+      "en": "Experience (details)",
+      "bn": "অভিজ্ঞতা (বিস্তারিত)",
+      "bn_roman": "Experience (bistarito)"
+    },
+    "achievements": {
+      "en": "Achievements (details)",
+      "bn": "অর্জন (বিস্তারিত)",
+      "bn_roman": "Achievements (bistarito)"
+    },
+    "research": {
+      "en": "Research (details)",
+      "bn": "গবেষণা (বিস্তারিত)",
+      "bn_roman": "Research (bistarito)"
+    },
+    "projects": {
+      "en": "Projects (details)",
+      "bn": "প্রজেক্ট (বিস্তারিত)",
+      "bn_roman": "Projects (bistarito)"
+    },
+    "skills": {
+      "en": "Skills & tech stack (details)",
+      "bn": "স্কিল ও টেক স্ট্যাক (বিস্তারিত)",
+      "bn_roman": "Skills & tech stack (bistarito)"
+    },
+    "contact": {
+      "en": "Contact (details)",
+      "bn": "যোগাযোগ (বিস্তারিত)",
+      "bn_roman": "Contact (bistarito)"
+    }
+  },
+  "quick_answers": {
+    "greeting": {
+      "en": "Hello! 😊 I'm JabuAi, Jaber's portfolio assistant. Ask me about his education, experience, achievements, research, projects, skills or contact info.",
+      "bn": "আসসালামু আলাইকুম! 😊 আমি JabuAi, জাবেরের পোর্টফোলিও অ্যাসিস্ট্যান্ট। তার শিক্ষা, অভিজ্ঞতা, অর্জন, গবেষণা, প্রজেক্ট, স্কিল বা যোগাযোগ — যেকোনো কিছু জিজ্ঞেস করতে পারেন।",
+      "bn_roman": "Assalamu Alaikum! 😊 Ami JabuAi, Jaber-er portfolio assistant. Tar education, experience, achievements, research, project, skill ba contact — jekono kichu jiggesh korte paren."
+    },
+    "thanks": {
+      "en": "You're welcome! 😊 Ask me anything else about Jaber's work anytime.",
+      "bn": "আপনাকেও ধন্যবাদ! 😊 জাবেরের কাজ নিয়ে আর কিছু জানতে চাইলে জিজ্ঞেস করুন।",
+      "bn_roman": "Apnakeo dhonnobad! 😊 Jaber-er kaj niye aro kichu jante chaile jiggesh korun."
+    },
+    "goodbye": {
+      "en": "Goodbye! 👋 Come back anytime if you want to know more about Jaber.",
+      "bn": "আল্লাহ হাফেজ! 👋 জাবের সম্পর্কে আরও জানতে চাইলে আবার আসবেন।",
+      "bn_roman": "Allah hafez! 👋 Jaber shomporke aro jante chaile abar ashben."
+    },
+    "bot_identity": {
+      "en": "I'm JabuAi, the assistant on this portfolio. I can tell you about {name} ({title}): education, experience, achievements, research, {project_total} projects, skills and contact details.",
+      "bn": "আমি JabuAi, এই পোর্টফোলিওর অ্যাসিস্ট্যান্ট। আমি {name} ({title}) সম্পর্কে বলতে পারি: শিক্ষা, অভিজ্ঞতা, অর্জন, গবেষণা, {project_total}টি প্রজেক্ট, স্কিল ও যোগাযোগের তথ্য।",
+      "bn_roman": "Ami JabuAi, ei portfolio-r assistant. Ami {name} ({title}) shomporke bolte pari: education, experience, achievements, research, {project_total}-ta project, skill ar contact details."
+    },
+    "about": {
+      "en": "{name} — {title}.\nRoles: {roles}\nIn his words: \"{intro}\"\nBased in {location}. {project_total} projects built, including {research_total} research works.\nTop areas: {tech_groups}.",
+      "bn": "{name} — {title}।\nভূমিকা: {roles}\nতার ভাষায়: \"{intro}\"\nঅবস্থান: {location}। মোট {project_total}টি প্রজেক্ট, এর মধ্যে {research_total}টি গবেষণা কাজ।\nমূল ক্ষেত্র: {tech_groups}।",
+      "bn_roman": "{name} — {title}.\nRoles: {roles}\nTar bhashay: \"{intro}\"\nThake: {location}. Mot {project_total}-ta project, tar moddhe {research_total}-ta research work.\nMain area: {tech_groups}."
+    },
+    "education": {
+      "en": "Education:\n{items}",
+      "bn": "শিক্ষা:\n{items}",
+      "bn_roman": "Education:\n{items}"
+    },
+    "experience": {
+      "en": "Experience:\n{items}",
+      "bn": "অভিজ্ঞতা:\n{items}",
+      "bn_roman": "Experience:\n{items}"
+    },
+    "achievements": {
+      "en": "Achievements:\n{items}",
+      "bn": "অর্জনসমূহ:\n{items}",
+      "bn_roman": "Achievements:\n{items}"
+    },
+    "research": {
+      "en": "Research: {research_total} research works ({research_tag}).\n{items}",
+      "bn": "গবেষণা: মোট {research_total}টি গবেষণা কাজ ({research_tag})।\n{items}",
+      "bn_roman": "Research: mot {research_total}-ta research work ({research_tag}).\n{items}"
+    },
+    "projects": {
+      "en": "{project_total} projects in {category_total} categories ({live_total} with live demos):\n{items}",
+      "bn": "{category_total}টি ক্যাটাগরিতে মোট {project_total}টি প্রজেক্ট ({live_total}টির লাইভ ডেমো আছে):\n{items}",
+      "bn_roman": "{category_total}-ta category-te mot {project_total}-ta project ({live_total}-ta-r live demo ache):\n{items}"
+    },
+    "skills": {
+      "en": "Skills & tech stack:\n{items}",
+      "bn": "স্কিল ও টেক স্ট্যাক:\n{items}",
+      "bn_roman": "Skills & tech stack:\n{items}"
+    },
+    "resume": {
+      "en": "Jaber's full resume (experience, education and achievements) is on the Resume page. Quick view:\n{items}",
+      "bn": "জাবেরের পূর্ণাঙ্গ রেজিউম (অভিজ্ঞতা, শিক্ষা ও অর্জন) Resume পেজে আছে। সংক্ষেপে:\n{items}",
+      "bn_roman": "Jaber-er puro resume (experience, education, achievements) Resume page-e ache. Songkhepe:\n{items}"
+    },
+    "contact": {
+      "en": "Contact {name}:\n- Email: {email}\n- Alt email: {email_alt}\n- Phone: {phone}\n- Location: {location}\n- LinkedIn: {linkedin}\n- GitHub: {github}",
+      "bn": "{name}-এর সাথে যোগাযোগ:\n- ইমেইল: {email}\n- বিকল্প ইমেইল: {email_alt}\n- ফোন: {phone}\n- অবস্থান: {location}\n- LinkedIn: {linkedin}\n- GitHub: {github}",
+      "bn_roman": "{name}-er shathe jogajog:\n- Email: {email}\n- Alt email: {email_alt}\n- Phone: {phone}\n- Location: {location}\n- LinkedIn: {linkedin}\n- GitHub: {github}"
+    }
+  },
+  "fallback_messages": {
+    "no_match": {
+      "en": "I couldn't find that in Jaber's portfolio. You can ask me about his education, experience, achievements, research, projects, skills or contact info — or reach him from the Contact page.",
+      "bn": "এই তথ্যটি জাবেরের পোর্টফোলিওতে খুঁজে পাইনি। আপনি তার শিক্ষা, অভিজ্ঞতা, অর্জন, গবেষণা, প্রজেক্ট, স্কিল বা যোগাযোগ নিয়ে জিজ্ঞেস করতে পারেন — অথবা Contact পেজ থেকে সরাসরি যোগাযোগ করুন।",
+      "bn_roman": "Ei tothyo Jaber-er portfolio-te pelam na. Apni tar education, experience, achievements, research, project, skill ba contact niye jiggesh korte paren — othoba Contact page theke shorasori jogajog korun."
+    }
+  },
+  "smalltalk_max_extra_tokens": 3
+}
