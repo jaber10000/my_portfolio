@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T19:39:34.560Z",
+  "generated_at": "2026-10-31T17:32:17.388Z",
   "profile": {
     "name": "Md. Abdullah Al Jaber",
     "first": "Md. Abdullah",
@@ -9,14 +9,12 @@
       "AI/ML Engineer",
       "Computer Vision Developer",
       "Generative AI & RAG Developer",
-      "AI Automation Engineer",
-      "Full-Stack Developer",
-      "Embedded Systems Enthusiast"
+      "Full-Stack Developer"
     ],
-    "intro": "I am a Computer Science and Engineering graduate passionate about building intelligent systems and practical software solutions. My work spans Artificial Intelligence, Machine Learning, Computer Vision, Generative AI, RAG applications, workflow automation, and full-stack development. From developing AI-powered assistants and machine learning models to building automated workflows and full-stack applications, I enjoy turning ideas into real-world solutions. I am also interested in research, emerging technologies, and continuous learning.",
-    "email": "jaber15-4458@diu.edu.bd",
-    "emailAlt": "bs10000jaber@gmail.com",
-    "phone": "+880 1777848795",
+    "intro": "I build intelligent systems end to end — from federated-learning research and RAG assistants to full-stack products people actually use.",
+    "email": "bs10000jaber@gmail.com",
+    "emailAlt": "jaber15-4458@diu.edu.bd",
+    "phone": "+880 1647271765",
     "location": "Mirpur-2, Dhaka, Bangladesh",
     "github": "https://github.com/jaber10000",
     "linkedin": "https://www.linkedin.com/in/md-abdullah-al-jaber-699a1a266/",
@@ -24,40 +22,39 @@
   },
   "experience": [
     {
-      "title": "Inbound Officer – Customer Care",
-      "org": "bKash Limited",
-      "period": "Nov 2025 – Present",
-      "text": "Handling customer queries and providing support for account and transaction-related issues. Using internal CRM tools to investigate and resolve customer problems, documenting interactions, escalating complex cases, and collaborating with the team to maintain service quality and improve customer experience."
+      "title": "Front End Developer",
+      "org": "IT Company",
+      "period": "Aug 2025 – Present",
+      "text": "Building responsive React applications and user interfaces."
     },
     {
       "title": "Student Data Scientist",
       "org": "Daffodil International University",
       "period": "Jan 2024 – Aug 2025",
-      "text": "Worked on academic research and development involving Artificial Intelligence and Machine Learning. Responsibilities and activities included data preprocessing, exploratory data analysis, model development, experimentation, and research-oriented problem solving."
+      "text": "Research and development in ML/AI models, data preprocessing, and analysis."
     },
     {
       "title": "Dataset Contest Winner",
       "org": "Daffodil International University",
       "period": "Jan 2025 – Apr 2025",
-      "text": "Recognized for outstanding work in a university-level data science dataset competition.",
+      "text": "Won dataset competition for outstanding data science work.",
       "award": true
     }
   ],
   "education": [
     {
-      "title": "BSc in Computer Science & Engineering",
+      "title": "BSc in CSE",
       "org": "Daffodil International University",
-      "period": "2021 – 2025",
-      "result": "CGPA: 3.30 / 4.00"
+      "period": "2021 – 2025"
     },
     {
-      "title": "Higher Secondary Certificate (HSC)",
-      "org": "Government BM College, Barisal",
+      "title": "HSC",
+      "org": "Gov't BM College, Barisal",
       "period": "2018 – 2019"
     },
     {
-      "title": "Secondary School Certificate (SSC)",
-      "org": "Jhalakathi N. S. Kamil Madrasah",
+      "title": "SSC",
+      "org": "Jhalakathi N S Kamil Madrasah",
       "period": "2016 – 2017"
     }
   ],
@@ -66,37 +63,35 @@
       "icon": "trophy",
       "title": "Dataset Contest Winner",
       "meta": "Daffodil International University · 2025",
-      "text": "Recognized for outstanding data science work in a university-level dataset competition."
+      "text": "Won the dataset competition for outstanding data science work."
     },
     {
       "icon": "flask",
       "title": "6 Research Contributions",
       "meta": "Federated Learning · Explainable AI · NLP",
-      "text": "Research contributions in privacy-preserving medical AI, federated learning, and Bangla fake-news detection."
+      "text": "Contributed to papers on privacy-preserving medical AI and Bangla fake-news detection."
     },
     {
       "icon": "rocket",
       "title": "8 Live Demos Shipped",
       "meta": "Streamlit · Hugging Face · Vercel",
-      "text": "Developed and deployed AI assistants, OCR applications, and full-stack products."
+      "text": "RAG assistants, OCR and full-stack products deployed and open for anyone to try."
     },
     {
       "icon": "chart",
       "title": "26 Projects Built",
-      "meta": "AI · Research · Web · Automation · Embedded Systems",
-      "text": "A growing portfolio of academic, research, and personal projects across machine learning, software engineering, workflow automation, and embedded systems."
+      "meta": "AI · Research · Web · Automation",
+      "text": "A growing body of work across machine learning, web engineering and workflow automation."
     }
   ],
   "certifications": [],
   "tech_stack": [
     {
       "label": "AI & Machine Learning",
-      "blurb": "Building intelligent models through classical machine learning, deep learning, natural language processing, and privacy-preserving federated learning.",
+      "blurb": "Models that learn from messy data — classical ML, deep learning, NLP and privacy-preserving federated training.",
       "tools": [
         "Python",
         "TensorFlow",
-        "Keras",
-        "PyTorch",
         "Scikit-Learn",
         "Pandas",
         "NumPy",
@@ -109,7 +104,7 @@
     },
     {
       "label": "Computer Vision",
-      "blurb": "Developing computer vision solutions for image classification, object and image analysis, OCR, and medical image segmentation.",
+      "blurb": "Teaching machines to see — OCR, image classification and medical image segmentation.",
       "tools": [
         "OpenCV",
         "Tesseract OCR",
@@ -122,22 +117,21 @@
       ]
     },
     {
-      "label": "Generative AI & RAG Development",
-      "blurb": "Building LLM-powered applications and retrieval-augmented assistants that provide context-aware answers using documents and external knowledge sources.",
+      "label": "Generative AI",
+      "blurb": "Retrieval-augmented assistants that ground LLM answers in real documents — in English and Bangla.",
       "tools": [
         "LangChain",
         "RAG",
         "FAISS",
         "Gemini API",
         "Sentence Transformers",
-        "Hugging Face",
         "LLMs",
         "Streamlit"
       ]
     },
     {
-      "label": "AI & Workflow Automation",
-      "blurb": "Designing automated, event-driven workflows for data collection, validation, conditional routing, notifications, and business process automation.",
+      "label": "Workflow Automation",
+      "blurb": "Event-driven workflows that validate, route and notify — so no inquiry waits for a human.",
       "tools": [
         "n8n",
         "Webhooks",
@@ -145,42 +139,27 @@
         "Gmail",
         "Telegram",
         "JSON",
-        "Conditional Routing",
-        "Workflow Automation"
+        "Conditional Routing"
       ]
     },
     {
       "label": "Full-Stack Development",
-      "blurb": "Developing full-stack web applications with responsive user interfaces, REST APIs, authentication systems, and relational databases.",
+      "blurb": "Polished interfaces on top of secure APIs — React front ends, FastAPI back ends, real databases.",
       "tools": [
-        "Python",
-        "JavaScript",
         "React",
         "TypeScript",
-        "Next.js",
         "FastAPI",
-        "Flask",
+        "Django",
         "PostgreSQL",
         "SQLite",
+        "MySQL",
         "JWT",
         "SQLAlchemy",
         "Alembic",
-        "HTML / CSS",
-        "Bootstrap",
-        "Git",
-        "GitHub"
-      ]
-    },
-    {
-      "label": "Embedded Systems & Microcontroller Programming",
-      "blurb": "Academic experience with embedded systems, Intel 8086 programming, Arduino, microcontrollers, and automated hardware-based projects.",
-      "tools": [
-        "Intel 8086",
-        "Arduino",
-        "Microcontrollers",
-        "Embedded C",
-        "LED Traffic Light System",
-        "Automated Fire Extinguisher Car"
+        "Flutter",
+        "Firebase",
+        "HTML / CSS / JS",
+        "PHP"
       ]
     }
   ],
@@ -605,40 +584,5 @@
       "github": "https://github.com/jaber10000/Enterprise-Contact-Automation-System",
       "live": null
     }
-  ],
-
-  "bot_profile": {
-    "name": "TumiAI",
-    "owner": "Md. Abdullah Al Jaber",
-    "role": "AI / ML Engineer"
-  },
-
-  "summary": {
-    "about": "Md. Abdullah Al Jaber is an AI/ML Engineer and Computer Science graduate from Daffodil International University.",
-    "current_job": "Inbound Officer – Customer Care at bKash Limited",
-    "total_projects": 26,
-    "total_research": 6
-  },
-
-  "quick_answers": {
-    "about": "Md. Abdullah Al Jaber is an AI/ML Engineer with expertise in AI, Machine Learning, Computer Vision, Generative AI and RAG.",
-    "experience": "Currently working as Inbound Officer – Customer Care at bKash Limited.",
-    "education": "BSc in Computer Science & Engineering from Daffodil International University (CGPA 3.30/4.00).",
-    "research": "Contributed to 6 research projects in AI, Federated Learning and NLP.",
-    "achievements": "Dataset Contest Winner and contributor to multiple AI research projects.",
-    "projects": "Built 26 projects across AI, Research, Full Stack Development and Automation.",
-    "contact": "Email: jaber15-4458@diu.edu.bd | Phone: +8801777848795"
-  },
-
-  "keywords": {
-    "about": ["jaber","abdullah","somporke"],
-    "experience": ["experience","job","work","career"],
-    "education": ["education","cgpa","ssc","hsc"],
-    "research": ["research","paper","publication"],
-    "projects": ["project","projects","portfolio"],
-    "achievements": ["achievement","award","winner"],
-    "contact": ["contact","email","phone","github","linkedin"]
-  }
+  ]
 }
-
-

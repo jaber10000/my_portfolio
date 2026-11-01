@@ -8,9 +8,9 @@
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import { pathToFileURL, fileURLToPath } from "node:url";
+import { pathToFileURL } from "node:url";
 
-const here = path.dirname(fileURLToPath(import.meta.url));
+const here = path.dirname(new URL(import.meta.url).pathname);
 const srcDir = path.resolve(process.argv[2] || path.join(here, "..", "src"));
 const out = path.join(here, "knowledge.json");
 
